@@ -15,7 +15,7 @@ namespace Huvudmeny
 
         public static bool MainMenu()
         {
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("--- Main Menu ---");
             Console.WriteLine("0. Exit");
             Console.WriteLine("1. Youth or retiree ");
@@ -35,7 +35,7 @@ namespace Huvudmeny
 
                 case 1:
                     perPersonPrice(numericResult);
-                    return false; // Since false closes the program, I can't use that. But break; doesn't work because I have to return a value. And true
+                    return true; // Since false closes the program, I can't use that. But break; doesn't work because I have to return a value. And true
                                     // is perpetually showing the main menu
 
 
@@ -44,7 +44,7 @@ namespace Huvudmeny
                     string people = Console.ReadLine();
                     int numPeople = int.Parse(people);
                     groupPrice(numPeople);
-                    return false;
+                    return true;
 
 
                 case 3:
@@ -55,7 +55,7 @@ namespace Huvudmeny
                     {
                         Console.Write($" {i+1}. {word}, ");
                     }
-                    return false;
+                    return true;
 
 
                 case 4:
@@ -69,7 +69,7 @@ namespace Huvudmeny
 
                     Console.WriteLine(thirdWord);
 
-                    return false;
+                    return true;
 
 
                 default:
